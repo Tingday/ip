@@ -3,10 +3,10 @@
 
 
 ## 框架
-requests
-flask
-python3
-aliyun
+requests  
+flask  
+python3  
+aliyun  
 
 ## 技术
 通过aliyun市场获得ip对应物理地址，然后展示出来。
