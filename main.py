@@ -5,6 +5,12 @@ import aliyun
 
 app = Flask(__name__)
 
+@app.route('/121')
+def SimpleIp():
+    ip = request.remote_addr
+    print("ip",ip)
+    res = aliyun.ip(ip).json()
+    return res
 
 @app.route('/')
 def ip():
@@ -28,6 +34,7 @@ def ip():
         print("msg", res['msg'])
 
     return render_template("ip.html",ip_addr=ip,ip_text=ip_text,ip_isp=ip_isp,msg = msg)
+
 
 if __name__ == "__main__":
     print("ip程序启动")
